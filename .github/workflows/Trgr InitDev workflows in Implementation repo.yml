@@ -9,6 +9,8 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
+permissions: read-all
+
 env:
   EDFI_ODS_IMP_TOKEN: ${{ secrets.REPO_DISPATCH_TOKEN }}
   REPOSITORY_OWNER: ${{ GITHUB.REPOSITORY_OWNER }}
